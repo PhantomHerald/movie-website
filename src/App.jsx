@@ -1,20 +1,17 @@
-import { useState } from 'react';
 import './App.css';
-import Moveicard from './componets/moveicard.jsx';
-
+import Favorites from './pages/fav.jsx';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/home.jsx';
 function App() {
-  const movienumber = 1;
-  
-
   return (
-    <>
-    {movienumber === 1 ? (
-      <Moveicard movie={{ title: "Hello", releaseDate: "2025", url: "https://via.placeholder.com/150" }} />
-    ) : (
-      <Moveicard movie={{ title: "part 2", releaseDate: "2027", url: "https://via.placeholder.com/150" }} />
-    )}
-    </>
+      <main className='main-content'>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/favorites" element={<Favorites />} />
+        </Routes>
+      </main>
   );
 }
 
 export default App;
+// Compare this snippet from src/index.css:

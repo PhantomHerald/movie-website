@@ -44,3 +44,34 @@
   flex: content;
   flex-wrap: wrap-reverse;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.moviesgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.movieimage img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.movieinfo {
+  margin-top: 0.5rem;
+}
