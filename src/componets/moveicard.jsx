@@ -1,3 +1,4 @@
+import "../css/MovieCard.css";
 function Moveicard({ movie }) {
     function onLike() {
         alert("You liked this movie");
